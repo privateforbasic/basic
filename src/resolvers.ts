@@ -2,7 +2,6 @@ import { initializeDB } from "src/db";
 // import { layout, home, courses, coursesPage } from "./data";
 import path from "path";
 import { createWriteStream } from "fs";
-import os from "os";
 
 const getCollection = async (name: string) => {
   const db = await initializeDB();
@@ -102,17 +101,14 @@ export const resolvers = {
       return "success";
     },
 
-    singleUpload: async (_, { file }) => {
+    uploadFile: async (_, { input: { path: _path, file } }) => {
       const { createReadStream, filename } = await file;
 
-      os.tmpdir();
-      const pathName = path.join(process.cwd(), `public/images/${filename}`);
+      const pathName = path.join(process.cwd(), `${_path}${filename}`);
       const stream = createReadStream();
       await stream.pipe(createWriteStream(pathName));
 
-      return {
-        url: `http://localhost:3000/images/${filename}`,
-      };
+      return file;
     },
   },
 };

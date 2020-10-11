@@ -10,7 +10,14 @@ const queryTypeDef = gql`
   scalar Upload
 
   type File {
-    url: String!
+    filename: String!
+    mimetype: String!
+    encoding: String!
+  }
+
+  input FileUpload {
+    path: String!
+    file: Upload!
   }
 
   type Query {
@@ -39,7 +46,8 @@ const queryTypeDef = gql`
 
     changeCourseVideo(input: CourseVideoInput!): String!
 
-    singleUpload(file: Upload!): File!
+    # singleUpload(file: Upload!): File!
+    uploadFile(input: FileUpload!): File!
   }
 `;
 

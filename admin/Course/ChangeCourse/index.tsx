@@ -7,6 +7,7 @@ import Landing from "./Landing";
 import Benefits from "./Benefits";
 import Discounts from "./Discounts";
 import Video from "./Video";
+import Test from "./Test";
 
 import { Container } from "./styles";
 import { allQueryFragments, allFragments } from "graphql/queris";
@@ -47,7 +48,7 @@ const ChangeCourse = ({ courseHref }) => {
     { title: "Landing", isActive: !!courseData.landing, component: Landing  },
     { title: "Benefits", isActive: !!courseData.benefits, component: Benefits  },
     { title: "Discounts", isActive: !!courseData.discounts, component: Discounts  },
-    { title: "Instructors", isActive: !!courseData.instructors, component: () => <div></div>  },
+    { title: "Instructors", isActive: !!courseData.instructors, component: Test  },
     { title: "WhoCanAttend", isActive: !!courseData.whoCanAttend, component: () => <div></div>  },
     { title: "Information", isActive: !!courseData.information, component: () => <div></div>  },
     { title: "Opportunities", isActive: !!courseData.opportunities, component: () => <div></div>  },
