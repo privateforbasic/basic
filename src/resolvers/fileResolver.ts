@@ -9,7 +9,7 @@ export default {
     },
   },
   Mutation: {
-    uploadFile: async (_, { input: { path: _path, file } }) => {
+    uploadFile: async (_, { file, path: _path }) => {
       const { createReadStream, filename } = await file;
 
       const pathName = path.join(process.cwd(), `${_path}${filename}`);

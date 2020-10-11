@@ -25,7 +25,7 @@ export const fileType = gql`
 
   type Mutation {
     # singleUpload(file: Upload!): File!
-    uploadFile(input: FileUpload!): File!
+    uploadFile(file: Upload!, path: String!): File!
     deleteFile(input: FileDelete!): String!
   }
 `;

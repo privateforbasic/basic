@@ -40,10 +40,10 @@ const FieldSetImage = ({
       },
     } = e;
 
+    console.log(file);
+
     validity.valid &&
-      uploadFile({ variables: { input: { path, file } } }).then(() =>
-        refetch()
-      );
+      uploadFile({ variables: { file, path } }).then(() => refetch());
   };
 
   const handleSetOpen = () => {
