@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-micro";
 
-export const homeTypeDefs = gql`
+export const homeType = gql`
   type Blog {
     id: String!
     title: String!
@@ -81,5 +81,9 @@ export const homeTypeDefs = gql`
     experiences: [Experience!]!
     feedbacks: Feedbacks!
     blog: Blogs!
+  }
+
+  type Query {
+    home: Home!
   }
 `;

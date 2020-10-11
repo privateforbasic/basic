@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useApolloClient } from "@apollo/client";
 
-import { CoursesPageQuery } from "graphql/queris";
+import { CoursesPageQuery } from "graphql/queries";
 import { Benefits, Filter, Faq } from "@pages/courses";
 import { initApolloWithAllQuery } from "utils/initApolloWithAllQuery";
 

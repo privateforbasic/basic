@@ -10,7 +10,7 @@ import Video from "./Video";
 import Test from "./Test";
 
 import { Container } from "./styles";
-import { allQueryFragments, allFragments } from "graphql/queris";
+import { allQueryFragments, allFragments } from "graphql/queries";
 import { Loading } from "admin/components/atoms";
 
 

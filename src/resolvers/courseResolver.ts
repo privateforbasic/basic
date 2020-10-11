@@ -1,14 +1,4 @@
 import { initializeDB } from "src/db";
-// import { layout, home, courses, coursesPage } from "./data";
-import path from "path";
-import { createWriteStream } from "fs";
-
-const getCollection = async (name: string) => {
-  const db = await initializeDB();
-  const collection = await db.collection(name).findOne({});
-
-  return collection;
-};
 
 const setData = async (match: any, newData: any) => {
   const db = await initializeDB();
@@ -23,17 +13,8 @@ const pushData = async (match: any, newData: any) => {
   await db.collection("courses").updateOne(match, { $push: newData });
 };
 
-export const resolvers = {
+export default {
   Query: {
-    layout: async () => {
-      return await getCollection("layout");
-    },
-    home: async () => {
-      return await getCollection("home");
-    },
-    coursesPage: async () => {
-      return await getCollection("coursesPage");
-    },
     courses: async () => {
       const db = await initializeDB();
       const courses = await db.collection("courses").find().toArray();
@@ -99,16 +80,6 @@ export const resolvers = {
         updates
       );
       return "success";
-    },
-
-    uploadFile: async (_, { input: { path: _path, file } }) => {
-      const { createReadStream, filename } = await file;
-
-      const pathName = path.join(process.cwd(), `${_path}${filename}`);
-      const stream = createReadStream();
-      await stream.pipe(createWriteStream(pathName));
-
-      return file;
     },
   },
 };

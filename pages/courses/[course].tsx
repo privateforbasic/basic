@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Head from "next/head";
 import AOS from "aos";
 
-import { CourseByNameQuery } from "graphql/queris";
+import { CourseByNameQuery } from "graphql/queries";
 
 import {
   Landing,

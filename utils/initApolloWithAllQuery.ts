@@ -1,5 +1,5 @@
 import { initializeApollo } from "src/apolloClient";
-import { RootQuery } from "graphql/queris";
+import { RootQuery } from "graphql/queries";
 
 export const initApolloWithAllQuery = async (
   query = RootQuery,

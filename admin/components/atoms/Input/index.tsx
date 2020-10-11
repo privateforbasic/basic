@@ -1,6 +1,6 @@
 import {} from "react";
 
-import { StyledLabel, DivasInput } from "./styles";
+import { StyledLabel, DivAsInput } from "./styles";
 
 const Input = ({ type, value, onClick = null, onChange = null }) => {
   return (
@@ -11,14 +11,21 @@ const Input = ({ type, value, onClick = null, onChange = null }) => {
   );
 };
 
-export const OldValue = ({ value, onClick = null, newValue }) => {
+export const OldValue = ({ value, onClick = null, newValue, image = null }) => {
   return (
-    <DivasInput onClick={onClick} title="click to change">
-      {value}
+    <DivAsInput onClick={onClick} title="click to change">
+      {image ? (
+        <img
+          src={`${image.path}${newValue ? newValue :image.name}`}
+          alt={newValue ? newValue.slice(0, -4) : image.name.slice(0, -4)}
+        />
+      ) : (
+        value
+      )}
       <button type="button" data-value={!!newValue}>
         Change
       </button>
-    </DivasInput>
+    </DivAsInput>
   );
 };
 

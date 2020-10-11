@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useApolloClient } from "@apollo/client";
 
-import { HomeQuery } from "graphql/queris";
+import { HomeQuery } from "graphql/queries";
 import {
   Landing,
   Advantages,

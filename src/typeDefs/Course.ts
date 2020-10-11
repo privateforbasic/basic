@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-micro";
 
-export const courseTypeDefs = gql`
+export const courseType = gql`
   type Portfolio {
     image: Image!
     link: Link!
@@ -110,15 +110,26 @@ export const courseTypeDefs = gql`
     video: VideoCourse
     portfolio: Portfolio
   }
+
+  type Query {
+    courses: [Course!]!
+    courseByName(href: String!): Course!
+  }
 `;
 
-export const courseMutationTypeDefs = gql`
+export const courseMutationType = gql`
+  input ImageInput {
+    src: String!
+    alt: String!
+  }
+
   # OnCoursesPage
 
   input OnCoursesPageInputNewValues {
     name: String
     description: String
     gradient: String
+    image: ImageInput
   }
 
   input OnCoursesPageInput {
@@ -145,11 +156,6 @@ export const courseMutationTypeDefs = gql`
   }
 
   # Benefit
-
-  input ImageInput {
-    src: String!
-    alt: String!
-  }
 
   input CourseBenefitInputNewValues {
     id: String!
@@ -191,19 +197,18 @@ export const courseMutationTypeDefs = gql`
     newData: CourseDiscountNewDataInput!
   }
 
-  #
-  #
-  #
-
-  input CourseSomeFieldInput {
-    href: String!
-    field: String!
-    value: String!
-  }
-
-  input DeleteFieldFromArrayInput {
-    href: String!
-    id: String!
-    field: String!
+  type Mutation {
+    # on course page
+    changeCourseOnCoursesPage(input: OnCoursesPageInput!): String!
+    # landing
+    changeCourseLanding(input: CourseLandingInput!): String!
+    # benefit
+    changeCourseBenefit(input: CourseBenefitInput!): String!
+    addCourseBenefit(input: CourseBenefitInput!): String!
+    # discount
+    changeCourseDiscount(input: CourseDiscountInput!): String!
+    addCourseDiscount(input: CourseDiscountInput!): String!
+    # video
+    changeCourseVideo(input: CourseVideoInput!): String!
   }
 `;

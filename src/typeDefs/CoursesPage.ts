@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-micro";
 
-export const coursesPageTypeDefs = gql`
+export const coursesPageType = gql`
   type Filter {
     id: String!
     filter: String!
@@ -27,5 +27,9 @@ export const coursesPageTypeDefs = gql`
     benefits: Benefits!
     faq: Faq!
     filters: [Filter!]!
+  }
+
+  type Query {
+    coursesPage: CoursesPage!
   }
 `;

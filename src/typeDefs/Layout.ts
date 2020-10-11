@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-micro";
 
-export const layoutTypeDefs = gql`
+export const layoutType = gql`
   type Tab {
     id: String
     tab: String
@@ -14,5 +14,9 @@ export const layoutTypeDefs = gql`
 
   type Layout {
     header: Header!
+  }
+
+  type Query {
+    layout: Layout!
   }
 `;

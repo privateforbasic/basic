@@ -1,7 +1,7 @@
 import { useApolloClient, useQuery } from "@apollo/client";
 import { useLang } from "hooks/useLang";
 import styled from "styled-components";
-import { LayoutQuery } from "graphql/queris";
+import { LayoutQuery } from "graphql/queries";
 import theme from "@styles/theme";
 import { memo } from "react";
 

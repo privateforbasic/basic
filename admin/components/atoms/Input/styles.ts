@@ -25,7 +25,7 @@ export const StyledLabel = styled.label`
   }
 `;
 
-export const DivasInput = styled.div`
+export const DivAsInput = styled.div`
   ${inputStyles}
   padding: 1em 7.5em 1em 1.5em;
   border-color: #29282b !important;
@@ -51,5 +51,11 @@ export const DivasInput = styled.div`
       color: #4b9c6d;
       box-shadow: 0px 0px 60px #4b9c6d;
     }
+  }
+
+  img {
+    height: 4em;
+    width: 4em;
+    object-fit: contain;
   }
 `;

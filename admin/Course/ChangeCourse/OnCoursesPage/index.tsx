@@ -1,35 +1,47 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
-import { useMutation, gql } from "@apollo/client";
+import { useMutation, useQuery, gql } from "@apollo/client";
 import { useFormReducer } from "./Context";
 
-import { FieldSet } from "admin/components/molecules";
+import { FieldSet, FieldSetImage } from "admin/components/molecules";
 import { Button } from "admin/components/atoms";
 import { Container } from "./styles";
 
-const SEND_NEW_VALUES = gql`
-  mutation SEND_NEW_VALUES($input: OnCoursesPageInput!) {
+const CHANGE_DATA = gql`
+  mutation CHANGE_DATA($input: OnCoursesPageInput!) {
     changeCourseOnCoursesPage(input: $input)
   }
 `;
 
+const LOGOS_DIRECTORY_PATH = "/images/courses/logos/";
+
 const OnCoursesPage = ({ data, refetch, queryloading }) => {
   const [state, dispatch] = useFormReducer();
   const [loading, setLoading] = useState(false);
-  const [sendNewValues] = useMutation(SEND_NEW_VALUES);
+
+  const [changeData] = useMutation(CHANGE_DATA);
 
   const { href, name, image, gradient, description } = data;
 
   const handleOnSubmit = e => {
     e.preventDefault();
-    const newValues = Object.entries(state).reduce(
+    const newValues: any = Object.entries(state).reduce(
       (acc, [key, val]) => (val ? { ...acc, [key]: val } : acc),
       {}
     );
+
+    if (state.imageName) {
+      newValues.image = {
+        src: state.imageName,
+        alt: state.imageName.slice(0, -4),
+      };
+      delete newValues.imageName;
+    }
     setLoading(true);
-    sendNewValues({ variables: { input: { href, newValues } } })
+    changeData({ variables: { input: { href, newValues } } })
       .then(() => refetch())
-      .then(() => setLoading(false));
+      .then(() => setLoading(false))
+      .then(() => dispatch({ type: "clearAll" }));
   };
 
   return (
@@ -55,6 +67,14 @@ const OnCoursesPage = ({ data, refetch, queryloading }) => {
           actionType="gradient"
           dispatch={dispatch}
           state={state}
+        />
+        <FieldSetImage
+          title="Image"
+          value={image.src}
+          actionType="imageName"
+          dispatch={dispatch}
+          state={state}
+          directoryPath={LOGOS_DIRECTORY_PATH}
         />
         <Button
           type="submit"

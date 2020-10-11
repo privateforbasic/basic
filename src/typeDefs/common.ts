@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-micro";
 
-export const commonTypeDefs = gql`
+export const commonType = gql`
   type Image {
     id: String
     src: String!
@@ -19,5 +19,24 @@ export const commonTypeDefs = gql`
     description: String
     image: Image
     style: String
+  }
+`;
+
+export const commonMutationType = gql`
+  input CourseSomeFieldInput {
+    href: String!
+    field: String!
+    value: String!
+  }
+
+  input DeleteFieldFromArrayInput {
+    href: String!
+    id: String!
+    field: String!
+  }
+
+  type Mutation {
+    deleteFiledFromArray(input: DeleteFieldFromArrayInput!): String!
+    changeCourseSomeField(input: CourseSomeFieldInput!): String!
   }
 `;
