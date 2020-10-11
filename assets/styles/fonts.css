@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Roboto Black'), local('Roboto-Black'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtvAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: "Agency FB";
+  src: url("fonts/agency-fb-bold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/agency-fb-bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/agency-fb-bold.otf") format("opentype"), /* Open Type Font */ url("fonts/agency-fb-bold.svg") format("svg"), /* Legacy iOS */ url("fonts/agency-fb-bold.ttf") format("truetype"), /* Safari, Android, iOS */ url("fonts/agency-fb-bold.woff") format("woff"), /* Modern Browsers */ url("fonts/agency-fb-bold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans Armenian";
+  src: url("./fonts/NotoSansArmenian-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/NotoSansArmenian-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("./fonts/NotoSansArmenian-Bold.otf") format("opentype"), /* Open Type Font */ url("./fonts/NotoSansArmenian-Bold.svg") format("svg"), /* Legacy iOS */ url("./fonts/NotoSansArmenian-Bold.ttf") format("truetype"), /* Safari, Android, iOS */ url("./fonts/NotoSansArmenian-Bold.woff") format("woff"), /* Modern Browsers */ url("./fonts/NotoSansArmenian-Bold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans Armenian";
+  src: url("./fonts/NotoSansArmenian-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/NotoSansArmenian-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("./fonts/NotoSansArmenian-Regular.otf") format("opentype"), /* Open Type Font */ url("./fonts/NotoSansArmenian-Regular.svg") format("svg"), /* Legacy iOS */ url("./fonts/NotoSansArmenian-Regular.ttf") format("truetype"), /* Safari, Android, iOS */ url("./fonts/NotoSansArmenian-Regular.woff") format("woff"), /* Modern Browsers */ url("./fonts/NotoSansArmenian-Regular.woff2") format("woff2");
+  /* Modern Browsers */
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+/*# sourceMappingURL=fonts.css.map */

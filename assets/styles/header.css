@@ -1,0 +1,148 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 35px;
+  justify-content: center;
+  background: #11111177;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0 25px;
+    background: #111;
+  }
+}
+header .container {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container #logo {
+  margin: 35px 0;
+  transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  header .container #logo {
+    margin: 25px 0;
+  }
+}
+header .container #logo img {
+  height: 50px;
+}
+header .container #logo img:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+@media screen and (max-width: 768px) {
+  header .container #logo img {
+    height: 45px;
+  }
+}
+header .container > section {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 35px;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  header .container > section {
+    grid-column-gap: 20px;
+  }
+}
+header .container > section nav {
+  display: flex;
+  padding: 17px 30px;
+  align-items: center;
+  background: linear-gradient(260deg, #232323cc 20%, #191919cc);
+  backdrop-filter: blur(10px);
+  align-self: center;
+  border-radius: 25px;
+  font-size: 1.1em;
+}
+@media screen and (max-width: 768px) {
+  header .container > section nav {
+    background: transparent;
+    padding: 17px;
+  }
+}
+header .container > section nav ul {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .container > section nav ul {
+    display: flex;
+  }
+  header .container > section nav ul li {
+    display: flex;
+    padding-right: 30px;
+    border-right: 2px solid #fff;
+    margin-right: 30px;
+  }
+  header .container > section nav ul li a {
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  header .container > section nav ul li a:hover span,
+  header .container > section nav ul li a:focus span {
+    transform: translateY(-100%);
+  }
+  header .container > section nav ul li a span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  header .container > section nav ul li a span:before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    font-weight: 900;
+    transform: translate3d(0, 0, 0);
+  }
+}
+header .container > section nav .menu {
+  cursor: pointer;
+}
+header .container > section nav .menu:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+header .container > section nav .menu img {
+  height: 7px;
+  margin: 5px 0;
+}
+header .container > section #search,
+header .container > section #flag {
+  background: linear-gradient(260deg, #232323cc 20%, #191919cc);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  header .container > section #search,
+  header .container > section #flag {
+    display: none;
+  }
+}
+header .container > section #search img,
+header .container > section #flag img {
+  margin: auto;
+}
+header .container > section #search {
+  padding: 16px;
+}
+header .container > section #search img {
+  height: 22px;
+}
+header .container > section #flag {
+  padding: 12px;
+}
+header .container > section #flag img {
+  height: 30px;
+}
+/*# sourceMappingURL=header.css.map */

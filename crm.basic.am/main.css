@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Roboto Black'), local('Roboto-Black'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfBBc9.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: inline-block;
+}
+body {
+  background-color: #141316;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+#application {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 250px auto;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+aside {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #29282b;
+}
+aside #logo {
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+aside #logo img {
+  display: block;
+  max-height: 100px;
+  padding: 1.5rem;
+  width: 100%;
+  background: #fff;
+}
+aside nav {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  background: #141316;
+}
+aside nav a {
+  width: 100%;
+  color: #fff;
+  font-weight: 400;
+  border-bottom: 1px solid #141316;
+  word-wrap: break-word;
+  background-color: #29282B;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  grid-column-gap: 15px;
+}
+aside nav a.active {
+  background: #141316;
+  color: #fff;
+  border-right: 0;
+  border-bottom: 0;
+}
+aside nav a.active + a {
+  border-top-right-radius: 1em;
+}
+aside nav a.beforeActive {
+  border-bottom-right-radius: 1em;
+}
+aside nav a:not(.active):hover {
+  background-color: #fff;
+  color: #222529;
+  font-weight: 400;
+}
+aside nav a:not(.active):hover span {
+  background-color: #fff;
+}
+aside nav a span {
+  background-color: #00000050;
+  display: flex;
+  height: 100%;
+  width: 70px;
+  padding: 1.25em 1em;
+  justify-content: center;
+  align-items: center;
+}
+aside nav a span svg {
+  font-size: 1.5rem;
+  height: 1em;
+}
+aside #copyrights {
+  color: #888;
+  background: #00000050;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: auto;
+  padding: 15px 0;
+  width: 100%;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+header {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color: #29282B;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  color: #fff;
+}
+header #searchBox {
+  width: 25%;
+  min-width: 250px;
+}
+header #searchBox input {
+  border: 0;
+  background: #fff;
+  padding: 1em;
+  border-radius: 50px;
+  font-size: 0.9em;
+  width: 100%;
+}
+#main {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding: 2.5rem;
+}
+#main > nav {
+  color: #fff;
+  margin-bottom: 2.5rem;
+  margin-left: 0.25rem;
+}
+#main .blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  margin-bottom: 2rem;
+  background: #29282b;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+#main .blocks a {
+  border-radius: 1em;
+  display: flex;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  color: #ffffffdd;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-position: left 1em bottom -2em;
+  transition: 0.1s;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 4em 0 4em 10em;
+}
+#main details {
+  background-color: #29282b;
+  border-radius: 1em;
+  margin-bottom: 2rem;
+}
+#main details summary {
+  padding: 1rem;
+  transition: 0.1s;
+  border-radius: 1em;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */

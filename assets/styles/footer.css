@@ -1,0 +1,146 @@
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 50px 35px 35px;
+  background: #000;
+  font-size: 1.1em;
+  box-shadow: 0px 0px 25px 5px #0005;
+  position: relative;
+  z-index: 10;
+}
+@media screen and (max-width: 1024px) {
+  footer {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 8%;
+  }
+}
+footer > section {
+  display: grid;
+  grid-template-columns: auto auto 0.5fr;
+  max-width: 1280px;
+  margin: auto;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  footer > section {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer > section {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer > section > ul:last-child {
+    grid-column: 1 / span 2;
+  }
+  footer > section > ul:not(:last-child) {
+    border-bottom: 2px solid #111;
+    padding-bottom: 45px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer > section > ul:last-child {
+    grid-column: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer > section > ul:nth-child(2) > li:last-child {
+    display: none;
+  }
+  footer > section > ul:nth-child(2) > li:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+}
+footer > section > ul:last-child li:first-child {
+  margin-bottom: 60px;
+}
+footer > section > ul:last-child li:last-child fieldset {
+  border: 0;
+  padding: 25px 0;
+}
+footer > section > ul:last-child #social {
+  display: flex;
+  justify-content: space-around;
+}
+footer > section > ul:last-child #social a {
+  transition: 0.1s;
+}
+footer > section > ul:last-child #social a:hover {
+  transform: scale(1.1);
+}
+footer > section > ul:last-child #social a img {
+  height: 50px;
+  margin: auto;
+}
+footer > section > ul:not(:last-child) li a {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 5px;
+}
+footer > section > ul:not(:last-child) li a:hover {
+  border-color: #fff;
+}
+footer > section > ul li {
+  text-align: left;
+}
+footer > section > ul li:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+footer > section > ul li a {
+  display: inline-block;
+}
+footer > section > ul li a img {
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  outline: 10px solid #000;
+}
+footer > section > ul li iframe {
+  display: block;
+}
+footer > section > ul li fieldset {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+}
+footer > section > ul li fieldset legend {
+  padding: 0 25px;
+  margin: auto;
+}
+footer > section > ul li fieldset input {
+  border: 0;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+footer > section > ul li fieldset input[type=text] {
+  border-radius: 15px 0 0 15px;
+  width: 65%;
+  background: #fff;
+}
+footer > section > ul li fieldset input[type=submit] {
+  border-radius: 0 15px 15px 0;
+  width: 35%;
+  background: #ccc;
+  cursor: pointer;
+}
+footer > section > ul li fieldset input[type=submit]:hover {
+  background: #bbb;
+}
+footer p {
+  color: #fff;
+  padding-top: 35px;
+}
+footer p span {
+  font-size: 1.2em;
+  color: #db295c;
+}
+/*# sourceMappingURL=footer.css.map */

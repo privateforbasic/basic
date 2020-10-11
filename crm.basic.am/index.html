@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section id="application">
+        <aside>
+            <section id="logo">
+                <img src="images/logo.svg">
+            </section>
+            <nav>
+                <a href="#"><span></span>Dashboard</a>
+                <a href="#"><span></span>Groups</a>
+                <a href="#"><span></svg></span>Schedules</a>
+                <a href="#"><span></span>Planning</a>
+                <a href="#"><span></span>Exams</a>
+                <a href="#"><span></span>Finance</a>
+                <a href="#" class="beforeActive"><span></span>Reports</a>
+                <a href="#" class="active"><span></span>Settings</a>
+                <a href="#"><span style="transform: rotate(180deg)"></span>Log out</a>
+            </nav>
+            <p id="copyrights">© 2020 | Basic CRM</p>
+        </aside>
+        <main>
+            <header>
+                <div class="input-group" id="searchBox">
+                    <input type="text" class="form-control" id="searchInput" aria-label="Text input with dropdown button" onkeyup="myFunction()" placeholder="Search ..">
+<!--                    <div class="input-group-btn">-->
+<!--                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                            Everywhere-->
+<!--                        </button>-->
+<!--                        <div class="dropdown-menu dropdown-menu-right">-->
+<!--                            <a class="dropdown-item" href="#">Everywhere</a>-->
+<!--                            <a class="dropdown-item" href="#">Another action</a>-->
+<!--                            <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                            <div role="separator" class="dropdown-divider"></div>-->
+<!--                            <a class="dropdown-item" href="#">Separated link</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+                <span>Vahe Hasratyan</span>
+            </header>
+            <section id="main">
+<!--                <section class="blocks">-->
+<!--                    <a href="#" style="background-image: url(https://image.flaticon.com/icons/svg/566/566944.svg);">-->
+<!--                        Students list-->
+<!--                    </a>-->
+<!--                    <a href="#" style="background-image: url(https://image.flaticon.com/icons/svg/33/33715.svg);background-color: #B80C09;">-->
+<!--                        Customize groups-->
+<!--                    </a>-->
+<!--                    <a href="#" style="background-color: #4A2545;">-->
+<!--                        Students list-->
+<!--                    </a>-->
+<!--                </section>-->
+                <section class="blocks">
+                    <a href="courses.html" style="background-image: url(https://image.flaticon.com/icons/svg/566/566944.svg); background-color: #E94F37">
+                        Courses
+                    </a>
+                </section>
+<!--                <details>-->
+<!--                    <summary>Active groups <span id="activeGroupsCount">(2)</span></summary>-->
+<!--                    <table id="groups">-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th>ID</th>-->
+<!--                            <th>Members</th>-->
+<!--                            <th>Instructor</th>-->
+<!--                            <th>Course</th>-->
+<!--                            <th>Phase</th>-->
+<!--                            <th>Exam date</th>-->
+<!--                            <th>Classroom</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        <tr>-->
+<!--                            <td>W1-210318-1</td>-->
+<!--                            <td>-->
+<!--                                <table class="table-inverse table-hover group">-->
+<!--                                    <thead>-->
+<!--                                    <tr>-->
+<!--                                        <th>ID</th>-->
+<!--                                        <th>First Name</th>-->
+<!--                                        <th>Last Name</th>-->
+<!--                                        <th>Payment</th>-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00001</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00002</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="red"><span id="overdueDays">40</span> days</section></td>-->
+<!--                                    </tr>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </td>-->
+<!--                            <td>Vahe Hasratyan</td>-->
+<!--                            <td>Front-End</td>-->
+<!--                            <td>HTML5.2/CSS3</td>-->
+<!--                            <td>21.04.2018</td>-->
+<!--                            <td class="classRoom">Green</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>W5-210318-1</td>-->
+<!--                            <td>-->
+<!--                                <table class="table-inverse table-hover group">-->
+<!--                                    <thead>-->
+<!--                                    <tr>-->
+<!--                                        <th>ID</th>-->
+<!--                                        <th>First Name</th>-->
+<!--                                        <th>Last Name</th>-->
+<!--                                        <th>Payment</th>-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00010</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00011</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="red"><span id="overdueDays">40</span> days</section></td>-->
+<!--                                    </tr><tr onclick="editUser()">-->
+<!--                                        <td>00012</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00013</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00014</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00015</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </td>-->
+<!--                            <td>Andranik Keshishyan</td>-->
+<!--                            <td>Back-End</td>-->
+<!--                            <td>Node.JS/Level 2</td>-->
+<!--                            <td>21.04.2018</td>-->
+<!--                            <td class="classRoom">Red</td>-->
+<!--                        </tr>-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </details>-->
+<!--                <details>-->
+<!--                    <summary>Passive groups <span id="activeGroupsCount">(7)</span></summary>-->
+<!--                    <table id="groups" class="table table-inverse table-hover">-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th>ID</th>-->
+<!--                            <th>Members</th>-->
+<!--                            <th>Instructor</th>-->
+<!--                            <th>Course</th>-->
+<!--                            <th>Phase</th>-->
+<!--                            <th>Exam date</th>-->
+<!--                            <th>Classroom</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        <tr>-->
+<!--                            <td>W1-210318-1</td>-->
+<!--                            <td>-->
+<!--                                <table class="table-inverse table-hover group">-->
+<!--                                    <thead>-->
+<!--                                    <tr>-->
+<!--                                        <th>ID</th>-->
+<!--                                        <th>First Name</th>-->
+<!--                                        <th>Last Name</th>-->
+<!--                                        <th>Payment</th>-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00001</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00002</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="red"><span id="overdueDays">40</span> days</section></td>-->
+<!--                                    </tr>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </td>-->
+<!--                            <td>Vahe Hasratyan</td>-->
+<!--                            <td>Front-End</td>-->
+<!--                            <td>HTML5.2/CSS3</td>-->
+<!--                            <td>21.04.2018</td>-->
+<!--                            <td class="classRoom">Green</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>W5-210318-1</td>-->
+<!--                            <td>-->
+<!--                                <table class="table-inverse table-hover group">-->
+<!--                                    <thead>-->
+<!--                                    <tr>-->
+<!--                                        <th>ID</th>-->
+<!--                                        <th>First Name</th>-->
+<!--                                        <th>Last Name</th>-->
+<!--                                        <th>Payment</th>-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00010</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00011</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="red"><span id="overdueDays">40</span> days</section></td>-->
+<!--                                    </tr><tr onclick="editUser()">-->
+<!--                                        <td>00012</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00013</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00014</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00015</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </td>-->
+<!--                            <td>Andranik Keshishyan</td>-->
+<!--                            <td>Back-End</td>-->
+<!--                            <td>Node.JS/Level 2</td>-->
+<!--                            <td>21.04.2018</td>-->
+<!--                            <td class="classRoom">Red</td>-->
+<!--                        </tr>-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </details>-->
+<!--                <details>-->
+<!--                    <summary>Inactive groups <span id="activeGroupsCount">(3)</span></summary>-->
+<!--                    <table id="groups" class="table table-inverse table-hover">-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th>ID</th>-->
+<!--                            <th>Members</th>-->
+<!--                            <th>Instructor</th>-->
+<!--                            <th>Course</th>-->
+<!--                            <th>Phase</th>-->
+<!--                            <th>Exam date</th>-->
+<!--                            <th>Classroom</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        <tr>-->
+<!--                            <td>W1-210318-1</td>-->
+<!--                            <td>-->
+<!--                                <table class="table-inverse table-hover group">-->
+<!--                                    <thead>-->
+<!--                                    <tr>-->
+<!--                                        <th>ID</th>-->
+<!--                                        <th>First Name</th>-->
+<!--                                        <th>Last Name</th>-->
+<!--                                        <th>Payment</th>-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00001</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00002</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="red"><span id="overdueDays">40</span> days</section></td>-->
+<!--                                    </tr>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </td>-->
+<!--                            <td>Vahe Hasratyan</td>-->
+<!--                            <td>Front-End</td>-->
+<!--                            <td>HTML5.2/CSS3</td>-->
+<!--                            <td>21.04.2018</td>-->
+<!--                            <td class="classRoom">Green</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>W5-210318-1</td>-->
+<!--                            <td>-->
+<!--                                <table class="table-inverse table-hover group">-->
+<!--                                    <thead>-->
+<!--                                    <tr>-->
+<!--                                        <th>ID</th>-->
+<!--                                        <th>First Name</th>-->
+<!--                                        <th>Last Name</th>-->
+<!--                                        <th>Payment</th>-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00010</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00011</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="red"><span id="overdueDays">40</span> days</section></td>-->
+<!--                                    </tr><tr onclick="editUser()">-->
+<!--                                        <td>00012</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00013</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00014</td>-->
+<!--                                        <td>Vahe</td>-->
+<!--                                        <td>Hasratyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr onclick="editUser()">-->
+<!--                                        <td>00015</td>-->
+<!--                                        <td>Arman</td>-->
+<!--                                        <td>Petrosyan</td>-->
+<!--                                        <td class="paymentStatus"><section class="green"></section></td>-->
+<!--                                    </tr>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </td>-->
+<!--                            <td>Andranik Keshishyan</td>-->
+<!--                            <td>Back-End</td>-->
+<!--                            <td>Node.JS/Level 2</td>-->
+<!--                            <td>21.04.2018</td>-->
+<!--                            <td class="classRoom">Red</td>-->
+<!--                        </tr>-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </details>-->
+            </section>
+        </main>
+    </section>
+</body>
+</html>

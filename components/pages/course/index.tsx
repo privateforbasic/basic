@@ -1,0 +1,11 @@
+export { default as Landing } from "./Landing";
+export { default as Benefits } from "./Benefits";
+export { default as Discounts } from "./Discounts";
+export { default as Instructors } from "./Instructors";
+export { default as WhoCanAttend } from "./WhoCanAttend";
+export { default as Information } from "./Information";
+export { default as Opportunities } from "./Opportunities";
+export { default as Syllabus } from "./Syllabus";
+export { default as Video } from "./Video";
+export { default as Additional } from "./Additional";
+export { default as Portfolio } from "./Portfolio";
